@@ -1,0 +1,1 @@
+var send = $("#send_message");

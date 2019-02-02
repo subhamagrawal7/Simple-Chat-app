@@ -43,6 +43,4 @@ io.on('connection',(socket)=>{
     socket.on('disconnect', function(data) {
        io.sockets.emit('chat message', 'USER '+socket.username+' DISCONNECTED');
     });
-
-    
 })
