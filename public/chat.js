@@ -18,8 +18,6 @@ $(function() {
   //Emit a username
   send_username.click(function() {
     socket.emit("change_username", { username: username.val() });
-    username.val("");
-    window.alert(`User Name Successfully Changed.`);
   });
   //Emit message
   send_message.click(function() {
