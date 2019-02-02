@@ -35,4 +35,14 @@ io.on('connection',(socket)=>{
     socket.on('typing', (data) => {
     	socket.broadcast.emit('typing', {username : socket.username})
     })
+
+    //emit message to all front-end clients
+    io.sockets.emit('chat message', 'USER '+socket.username+' IS ONLINE');
+
+    //handling disconnects
+    socket.on('disconnect', function(data) {
+       io.sockets.emit('chat message', 'USER '+socket.username+' DISCONNECTED');
+    });
+
+    
 })
