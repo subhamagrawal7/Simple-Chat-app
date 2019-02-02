@@ -7,21 +7,37 @@
       rel="stylesheet"
       type="text/css"
     />
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-    <title>Simple Chat App</title>
+    <title>GetInTouch</title>
   </head>
 
   <body>
-    <div id="login-div">
-      <input type="email" id="email" />
-      <input type="password" id="password" />
-      <button id="login">login</button>
-      <button id="signup">sign up</button>
-    </div>
+      
+    <div class="container" id="main-sec">
+        
+    <div class="row">
+      
+      <div class="col-md-4"></div>
+      <div id="login-div" class="col-md-4">
+          <h1 class="display-6" style="text-align:center; color: #888; padding-bottom: 5%;">GetInTouch</h1>
+        <div class="form-group">
+          <input type="email" id="email" class="form-control" name="email" placeholder="Enter Email" />
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" class="form-control" placeholder="Enter password"/>
+        </div>
 
+        <button id="login" class="btn btn-outline-primary ">login  </button>
+        <br><br>  
+        <button id="signup" class="btn btn-outline-success">sign up</button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
     <div id="loggedin-div">
       <button id="logout">logout</button>
       <header>
