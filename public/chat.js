@@ -15,11 +15,14 @@ $(function() {
   send_username.click(function() {
     console.log(username.val());
     socket.emit("change_username", { username: username.val() });
+    username.val("");
+    window.alert(`User Name Successfully Changed.`);
   });
 
   //Emit message
   send_message.click(function() {
     socket.emit("new_message", { message: message.val() });
+    message.val("");
   });
 
   //Listen on new_message
