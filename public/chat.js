@@ -40,7 +40,6 @@ $(function() {
   //on io.emit from backend (notice 'chat message' event has same name as server side)
   socket.on("chat message", function(msg) {
     console.log("Yay, I got a message back from the server: ", msg);
-
     //handle the message however you would like
     // message.append($('<li>').text(msg));
     feedback.html("<p><i>" + msg + "</i></p>");

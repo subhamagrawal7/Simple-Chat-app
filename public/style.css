@@ -42,7 +42,7 @@ h1 {
 
 #change_username {
   text-align: right;
-  margin: 0.5%;
+  margin-right: 2%;
   height: 2.1em;
 }
 
@@ -79,16 +79,17 @@ h1 {
 } */
 
 section#chatroom {
-  border: 5px inset #8258fa;
-  height: 85%;
+  border: 5px inset #888888;
+  height: 70%;
   overflow: auto;
+  margin: 0.5em 2em;
 }
 
 section#input_zone {
   height: 7%;
   text-align: center;
   background-color: transparent;
-  margin: 0.5em;
+  margin: 0.5em 2em;
 }
 
 .vertical-align {
@@ -104,8 +105,8 @@ section#input_zone {
   width: 88%;
   height: 70%;
   font-family: "Comfortaa", sans-serif;
-  font-size: 1.5em;
-  padding: 0.5em;
+  font-size: 1em;
+  padding: 1em;
   outline: none;
   border-radius: 6px;
   border: none;
@@ -125,8 +126,8 @@ section#input_zone {
   color: #3cf78a;
   cursor: pointer;
   transition-duration: 0.5s;
-}
-*/
+}*/
+
 p.message {
   margin: 0px;
   width: 100%;
@@ -137,11 +138,11 @@ p.message {
 }
 
 .message:nth-child(even) {
-  background-color: #81daf5;
+  background-color: #eee;
 }
 
 .message:nth-child(odd) {
-  background-color: #81bef7;
+  background-color: #dddddd;
 }
 
 #login-div {
