@@ -11,12 +11,14 @@ $(function() {
   var chatroom = $("#chatroom");
   var feedback = $("#feedback");
 
-  //Emit a username
-  send_username.click(function() {
-    console.log(username.val());
-    socket.emit("change_username", { username: username.val() });
+  firebase.auth().onAuthStateChanged(function(user) {
+    username.val(user.email);
   });
 
+  //Emit a username
+  send_username.click(function() {
+    socket.emit("change_username", { username: username.val() });
+  });
   //Emit message
   send_message.click(function() {
     socket.emit("new_message", { message: message.val() });
