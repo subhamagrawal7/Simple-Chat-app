@@ -1,6 +1,8 @@
 $(function(){
     //make connection
-    var socket = io.connect('https://simplechat998.herokuapp.com/');
+	var socket = io.connect('https://simplechat998.herokuapp.com/');
+    // var socket = io.connect('http://localhost:3000');
+	
 
     //buttons and inputs
 	var message = $("#message")
@@ -36,4 +38,15 @@ $(function(){
 	socket.on('typing', (data) => {
 		feedback.html("<p><i>" + data.username + " is typing a message..." + "</i></p>")
 	})
+
+	//on io.emit from backend (notice 'chat message' event has same name as server side)
+    socket.on('chat message', function(msg){
+
+		console.log('Yay, I got a message back from the server: ', msg)
+	 
+		//handle the message however you would like
+		// message.append($('<li>').text(msg));
+		feedback.html("<p><i>"+msg+"</i></p>");
+	 
+	});
 })
