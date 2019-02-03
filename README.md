@@ -2,7 +2,7 @@
 
 ## About
 
-This app is focused upon reducing the communication app between patient and doctors at situation where the person cannot reach to doctor.
+This app is focused upon reducing the communication gap between patient and doctors at situation where the person cannot reach to doctor.
 
 ## Dependencies
 - Parcel as bundler
