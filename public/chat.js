@@ -19,7 +19,15 @@ $(function() {
   send_username.click(function() {
     socket.emit("change_username", { username: username.val() });
     message.prop("disabled", false);
+    send_message.prop("disabled", false);
   });
+
+  message.keypress(e => {
+    if (e.which === 13) {
+      send_message.click();
+    }
+  });
+
   //Emit message
   send_message.click(function() {
     socket.emit("new_message", { message: message.val() });
