@@ -24,7 +24,13 @@ $(function() {
     message.prop("disabled", false);
     send_message.prop("disabled", false);
     database.ref("/" + patientDisease.val()).on("value", function(snapshot) {
-      console.log(snapshot.val().doc1.email);
+      console.log(snapshot.val());
+      var obj = snapshot.val();
+      for (var doctor in obj) {
+        console.log(obj[doctor]);
+        console.log(obj[doctor].email);
+        console.log(obj[doctor].name);
+      }
     });
   });
 
