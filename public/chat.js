@@ -22,6 +22,7 @@ $(function() {
     send_message.prop("disabled", false);
   });
 
+  // enter is send
   message.keypress(e => {
     if (e.which === 13) {
       send_message.click();
