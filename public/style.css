@@ -106,8 +106,8 @@ h1 {
   height: 100%;
   width: 20%;
   display: inline-block;
-  margin: 0.5em;
-  padding: 0.5em;
+ 
+  text-align:center;
   box-shadow: 0 0 15px #565656;
   overflow: auto;
 }
@@ -116,7 +116,7 @@ section#input_zone {
   height: 7%;
   text-align: center;
   background-color: transparent;
-  margin: 2em;
+  margin: .1em;
 }
 
 .vertical-align {

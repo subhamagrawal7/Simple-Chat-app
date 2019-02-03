@@ -23,11 +23,28 @@ $(function() {
     socket.emit("change_username", { username: username.val() });
     message.prop("disabled", false);
     send_message.prop("disabled", false);
+    
     database.ref("/" + patientDisease.val()).on("value", function(snapshot) {
       var obj = snapshot.val();
+      const insertElement = document.querySelector('.docList');
+      insertElement.textContent = "";
       for (var doctor in obj) {
-        console.log(obj[doctor].email);
-        console.log(obj[doctor].name);
+        var nam = obj[doctor].name;
+        console.log(nam); 
+        
+        console.log(insertElement);
+        const markup = 
+        `<li>
+            <div id='single_doc'>
+            <p>Name: <b>${nam}</b></p>
+            <p>Email: <b>${obj[doctor].email}</b></p>
+            </div>
+            <hr>
+          </li>
+        `;
+        insertElement.insertAdjacentHTML('beforeend', markup);
+        // console.log(obj[doctor].email);
+        // console.log(obj[doctor].name);
       }
     });
   });
