@@ -30,9 +30,9 @@ $(function() {
       insertElement.textContent = "";
       for (var doctor in obj) {
         var nam = obj[doctor].name;
-        console.log(nam); 
+        //console.log(nam); 
         
-        console.log(insertElement);
+        //console.log(insertElement);
         const markup = 
         `<li>
             <div id='single_doc'>
@@ -64,7 +64,7 @@ $(function() {
 
   //Listen on new_message
   socket.on("new_message", data => {
-    console.log(data);
+    //console.log(data);
     chatroom.append(
       "<p class='message'>" + data.username + " : " + data.message + "</p>"
     );
@@ -79,7 +79,7 @@ $(function() {
 
   //on io.emit from backend (notice 'chat message' event has same name as server side)
   socket.on("chat message", function(msg) {
-    console.log("Yay, I got a message back from the server: ", msg);
+    //console.log("Yay, I got a message back from the server: ", msg);
     //handle the message however you would like
     // message.append($('<li>').text(msg));
     feedback.html("<p><i>" + msg + "</i></p>");
