@@ -10,6 +10,9 @@ $(function() {
   var send_username = $("#send_username");
   var chatroom = $("#chatroom");
   var feedback = $("#feedback");
+  var patientDisease = $("#patient-disease");
+
+  var database = firebase.database();
 
   firebase.auth().onAuthStateChanged(function(user) {
     username.val(user.email);
@@ -20,6 +23,9 @@ $(function() {
     socket.emit("change_username", { username: username.val() });
     message.prop("disabled", false);
     send_message.prop("disabled", false);
+    database.ref("/" + patientDisease.val()).on("value", function(snapshot) {
+      console.log(snapshot.val().doc1.email);
+    });
   });
 
   // enter is send
