@@ -18,6 +18,7 @@ $(function() {
   //Emit a username
   send_username.click(function() {
     socket.emit("change_username", { username: username.val() });
+    message.prop("disabled", false);
   });
   //Emit message
   send_message.click(function() {
@@ -29,7 +30,7 @@ $(function() {
   socket.on("new_message", data => {
     console.log(data);
     chatroom.append(
-      "<p class='message'>" + data.username + ": " + data.message + "</p>"
+      "<p class='message'>" + data.username + " : " + data.message + "</p>"
     );
   });
 
