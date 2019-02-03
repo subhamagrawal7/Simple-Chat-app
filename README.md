@@ -17,3 +17,5 @@ npm run start
 
 ## Link to projet
 [GetInTouch](https://simplechat998.herokuapp.com/)
+
+Make sure to allow unsafe scripts.
